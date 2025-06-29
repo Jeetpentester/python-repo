@@ -24,6 +24,8 @@ steps:
   - script: |
      curl -L -o terrascan.zip https://github.com/tenable/terrascan/releases/download/v1.19.9/terrascan_1.19.9_Windows_x86_64.zip
      powershell -Command "Expand-Archive -Path terrascan.zip -DestinationPath terrascan -Force"
+     
+     
      cd terrascan
-     terrascan\terrascan.exe scan -t aws -i terraform -d %BUILD_SOURCESDIRECTORY%
+     terrascan.exe scan -t aws -i terraform -d %BUILD_SOURCESDIRECTORY%
     displayName: 'Run Terrascan'
