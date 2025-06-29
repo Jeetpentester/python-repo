@@ -1,7 +1,7 @@
 trigger:
   branches:
     include:
-      - main  # or "master", depending on your branch
+      - master  # or "master", depending on your branch
 
 pool:
   vmImage: 'windows-latest'
