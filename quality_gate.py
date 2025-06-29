@@ -22,5 +22,5 @@ def check_quality_gate(report_file):
         sys.exit(0)
 
 if __name__ == "__main__":
-    report_file = "report.json"  # change if your file has a different name/path
+    report_file = "terrascan_report.json"  # change if your file has a different name/path
     check_quality_gate(report_file)
