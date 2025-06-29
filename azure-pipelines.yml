@@ -1,0 +1,22 @@
+trigger:
+  branches:
+    include:
+      - main  # or "master", depending on your branch
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  pythonVersion: '3.10'
+
+steps:
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '$(pythonVersion)'
+      addToPath: true
+
+  - script: |
+      cd projects/Calculate_age
+      python calculate.py
+
+    displayName: 'Run Python script'
